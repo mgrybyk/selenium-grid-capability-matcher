@@ -1,6 +1,10 @@
 # Custom Capability Matcher
-Example that shows how to implement a Selenium Grid capability matcher, implementation of a tutorial that can be
-found [here](https://rationaleemotions.wordpress.com/2014/01/19/working-with-a-custom-capability-matcher-in-the-grid/).
+
+> Adds support of `deviceName` or `appium:deviceName` while still supports default `browserName`.
+
+Still works like default capability matcher, but also adds suport of `deviceName`.
+
+Don't pass device name into `browser` property, it is required to pass either `browser` or `deviceName`.
 
 ## Usage
 
@@ -27,3 +31,7 @@ java -cp $javaClasses org.openqa.grid.selenium.GridLauncherV3 -role hub -hubConf
 1. Build `mvn -q install -DskipTests` 
 2. Download grid server `./download-server.sh` (in *example* folder)
 3. Run grid server `./gridStart.sh` (in *example* folder)
+
+---
+
+[Original Turtorial](https://rationaleemotions.wordpress.com/2014/01/19/working-with-a-custom-capability-matcher-in-the-grid/)
