@@ -1,0 +1,17 @@
+{
+  "host": "127.0.0.1",
+  "port": 4441,
+  "newSessionWaitTimeout": 60,
+  "servlets": [],
+  "withoutServlets": [],
+  "custom": {},
+  "capabilityMatcher": "com.wdio.qa.grid.matcher.CapabilityMatcher",
+  "registry": "org.openqa.grid.internal.DefaultGridRegistry",
+  "throwOnCapabilityNotPresent": true,
+  "cleanUpCycle": 5000,
+  "role": "hub",
+  "debug": false,
+  "browserTimeout": 0,
+  "timeout": 90,
+  "sessionTimeout": 90
+}
