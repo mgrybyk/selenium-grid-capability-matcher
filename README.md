@@ -26,11 +26,11 @@ javaClasses="$seleniumServerJar:$capabilityMatcherJar"
 java -cp $javaClasses org.openqa.grid.selenium.GridLauncherV3 -role hub -hubConfig hubconfig.json
 ```
 
-## Example
+## Running
 
 1. Build `mvn -q install -DskipTests` 
-2. Download grid server `./download-server.sh` (in *example* folder)
-3. Run grid server `./gridStart.sh` (in *example* folder)
+2. Download grid server `./download-server.sh` (in *run* folder)
+3. Run grid server `./gridStart.sh` (in *run* folder)
 
 ---
 

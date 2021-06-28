@@ -9,21 +9,20 @@ public class CapabilityMatcher extends DefaultCapabilityMatcher {
 
     @Override
     public boolean matches(Map<String, Object> nodeCapability, Map<String, Object> requestedCapability) {
-        final String deviceName = "deviceName";
-        final String deviceNameAppium = "appium:" + deviceName;
+        final String deviceId = "deviceId";
+        final String deviceIdAppium = "appium:" + deviceId;
         final String browserName = "browserName";
 
         // If the request does not have the special capability,
         // we return what the DefaultCapabilityMatcher returns
         boolean result;
-        if (requestedCapability.containsKey(deviceName)) {
-            result = matcher(nodeCapability, requestedCapability, deviceName, deviceName);
-        } else if (requestedCapability.containsKey(deviceNameAppium)) {
-            result = matcher(nodeCapability, requestedCapability, deviceName, deviceNameAppium);
+        if (requestedCapability.containsKey(deviceId)) {
+            result = matcher(nodeCapability, requestedCapability, deviceId, deviceId);
+        } else if (requestedCapability.containsKey(deviceIdAppium)) {
+            result = matcher(nodeCapability, requestedCapability, deviceId, deviceIdAppium);
         } else if (requestedCapability.containsKey(browserName)) {
             result = matcher(nodeCapability, requestedCapability, browserName, browserName);
         } else {
-            System.out.println("Basic matcher");
             result = super.matches(nodeCapability, requestedCapability);
         }
 
